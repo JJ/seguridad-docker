@@ -1,75 +1,91 @@
 <!doctype html>
 <html>
-	<head>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	  
-	  <title>Despliega seguro</title>
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/moon.css">
-		<link rel="stylesheet" href="css/extra.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-			  <section><h1>Despliega seguro:</h1>
-			    <h2>Buenas, malas y peores prácticas en el
-			      despliegue de aplicaciones en la nube</h2>
-			  </section>
-			  
-			  <section
-			data-background='https://farm8.staticflickr.com/7532/15362433554_d5f146d0dc_o_d.jpg'
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Despliega seguro</title>
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+    <link rel="stylesheet" href="css/extra.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    
+    <!-- Printing and PDF exports -->
+    <script>
+     var link = document.createElement( 'link' );
+     link.rel = 'stylesheet';
+     link.type = 'text/css';
+     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+     document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section><h1>Despliega seguro:</h1>
+	  <h2>Buenas, malas y peores prácticas en el
+	    despliegue de aplicaciones en la nube</h2>
+	</section>
+	
+	<section
+	  data-background='https://farm8.staticflickr.com/7532/15362433554_d5f146d0dc_o_d.jpg'
 alt='policía suiza'>
+	  
+	  <aside class='notes'>Cuando recibes un
+	    email de un proveedor de nube que te
+	    pregunta qué estás haciendo, que al parecer
+	    una de tus máquinas virtuales está
+	    participando en un fraude masivo según la
+	    policía suiza... Te echas a temblar. Aunque
+	    sea la policía suiza y no la policía
+	    municipal de Coslada. </aside>
+	  
+	</section>
+	
+	<section data-background='img/ordenadores.jpg'>
+	  <aside class='notes'>La nube son los
+	    ordenadores de otros.</aside>
+	</section>
 
-			    <aside class='notes'>Cuando recibes un
-			  email de un proveedor de nube que te
-			  pregunta qué estás haciendo, que al parecer
-			  una de tus máquinas virtuales está
-			  participando en un fraude masivo según la
-			  policía suiza... Te echas a temblar. Aunque
-			  sea la policía suiza y no la policía
-			      municipal de Coslada. </aside>
-			  
-			  </section>
+	<section data-background='img/zapatos-nubes-hdr.jpg'>
+	  <aside class='notes'>Desplegando a la nube</aside>
+	</section>
+		 
+	
+		
+	<section data-background='img/dinero-en-estanque.jpg'>
+	  <aside class='notes'>O, como pensó mi hija
+	    cuando vio monedas en una fuente, "Dinero
+	    gratis" para mucha gente. ¿Por qué? Porque los despliegues
+	  en la nube se hacen así.</aside>
+	</section>
 
-			  <section data-background='img/ordenadores.jpg'>
-			    <aside class='notes'>La nube son los
-			      ordenadores de otros.</aside>
-			  </section>
-
-			  
-			  <section data-background='img/dinero-en-estanque.jpg'>
-			    <aside class='notes'>O, como pensó mi hija
-			    cuando vio monedas en una fuente, "Dinero
-			    gratis" para mucha gente.</aside>
-			  </section>
-
-			  <section
-			    data-background='img/pegatinas-github.jpg'>
-			  </section>
-
-			  <section>
-			    <h3>Créditos</h3>
-			    <ul class='credits'>
-			      <li><a
-			    href='https://www.flickr.com/photos/93482748@N02/15362433554/'>Policía
-				suiza por Thomas 8047</a>
-			      </li>
-			    </ul>
-			</div>
+	<section data-background='img/tuits.jpg' alt='tuits'>
+	  <aside class='notes'>La nube trabaja con tokens, fichas con
+	    las que se accede a tu configuración. Estas fichas a
+	  veces, alguien, las pone en un repositorio público en
+	  GitHub. Y los githubminers/bitcoinminers tardan segundos en
+	  hacerse con ellas. </aside>
+	</section>
+	
+	<section
+	  data-background='img/pegatinas-github.jpg'>
+	</section>
+	
+	<section>
+	  <h3>Créditos</h3>
+	  <ul class='credits'>
+	    <li><a
+	      href='https://www.flickr.com/photos/93482748@N02/15362433554/'>Policía
+	      suiza por Thomas 8047</a>
+	      <li><a
+	  href='https://www.flickr.com/photos/wendyga/19438901424/in/dateposted/'>Tuits
+		por Wendy</a></li>
+	  </ul>
+      </div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
