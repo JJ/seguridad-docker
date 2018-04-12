@@ -1,12 +1,12 @@
 section[data-background] h1 { 
-       background-color:rgba(233,232,233,0.7);
+       background-color:rgba(23,22,21,0.7);
        padding: 50px;
        margin: 20px;
        border-radius: 30px
 }
 
 section[data-background] h2 {
-       background-color:rgba(211,211,211,0.7);
+       background-color:rgba(21,20,19,0.7);
        padding: 30px;
        margin: 15px;
        border-radius: 20px
