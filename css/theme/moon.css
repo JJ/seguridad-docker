@@ -2,8 +2,8 @@
  * Solarized Dark theme for reveal.js.
  * Author: Achim Staebler
  */
-@import url(../../lib/font/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+@import url('https://fonts.googleapis.com/css?family=Barrio|Overpass+Mono|Roboto|Lalezar');
 /**
  * Solarized colors by Ethan Schoonover
  */
@@ -19,7 +19,7 @@ body {
   background-color: #002b36; }
 
 .reveal {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 40px;
   font-weight: normal;
   color: #93a1a1; }
@@ -50,16 +50,16 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eee8d5;
-  font-family: "League Gothic", Impact, sans-serif;
+  font-family: "Lalezar", Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
   text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.77em; }
+    font-family: 'Barrio', cursive;
+    font-size: 3.77em; }
 
 .reveal h2 {
   font-size: 2.11em; }
@@ -160,11 +160,13 @@ body {
   text-transform: none; }
 
 .reveal pre code {
-  display: block;
-  padding: 5px;
-  overflow: auto;
-  max-height: 400px;
-  word-wrap: normal; }
+    font-family: 'Overpass Mono', monospace;
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 600px;
+    word-wrap: normal;
+}
 
 .reveal table {
   margin: auto;
