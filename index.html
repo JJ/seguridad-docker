@@ -29,6 +29,11 @@
 	  <h2>Buenas, malas y peores prácticas en el
 	    despliegue de aplicaciones en la nube</h2>
 	</section>
+
+	<section data-background='img/cristiano-and-me.jpg'>
+	  <h1><code><a href='https://github.com/jj/'>github.com/JJ</a></code></h1>
+	  <h2><a href='t.me/cosasstuff'>t.me/cosasstuff</a></h2>
+	</section>
 	
 	<section
 	  data-background='https://farm8.staticflickr.com/7532/15362433554_d5f146d0dc_o_d.jpg'
@@ -94,10 +99,13 @@ stdout_logfile=/var/log/supervisor/gobot.log</code></pre>
 	    ansible y poder hacer el despliegue.</aside>
 	</section>
 
-	<section><h1>Usa las variables de entorno</h1>
+	<section
+	  data-background='https://farm6.staticflickr.com/5594/30636565420_08934092de_k_d.jpg'
+	  alt='nubes en el entorno'>
+	  <h1>Usa las variables de entorno</h1>
 	  <pre><code>role WebService::GitHub::Role { #Perl 6 tiene roles
     has $.endpoint = 'https://api.github.com';
-    has $.access-token= %*ENV&lt;GH_TOKEN>;
+    has $.access-token = %*ENV&lt;GH_TOKEN>; # ← y twigilos
     has $.auth_login;
     has $.auth_password; #... Y eso
 }
