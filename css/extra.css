@@ -12,6 +12,13 @@ section[data-background] h2 {
        border-radius: 20px
 }
 
+section[data-background] ul {
+       background-color:rgba(31,30,29,0.7);
+       padding: 30px;
+       margin: 15px;
+       border-radius: 20px
+}
+
 section[data-background] h3 {
        background-color:rgba(213,213,213,0.7);
        padding: 20px;

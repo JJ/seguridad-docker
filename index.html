@@ -111,12 +111,65 @@ stdout_logfile=/var/log/supervisor/gobot.log</code></pre>
 }
 	  </code></pre>
 	</section>
+
+	<section
+	  data-background='https://farm5.staticflickr.com/4636/25466861348_33fcbb0651_h_d.jpg'><h2>O
+	  desplegando con <code>fabric</code></h2>
+	  <pre><code>    with cd(env.release_path):
+        with shell_env(GOROOT=goroot,GOPATH=gopath,
+                       GOBIN=gobin,BOT_TOKEN=bot_token,
+                       PAPERTRAIL_HOST=papertrail_host,
+                       PAPERTRAIL_PORT=papertrail_port,
+                       LOGZ_HOST=logz_host,
+                       LOGZ_TOKEN=logz_token):
+            run("supervisorctl start CuantoQuedaBot" )
+	  </code></pre>
+	</section>
 	
 	<section
 	  data-background='img/pegatinas-github.jpg'>
 	</section>
+
+	<section
+	  data-background='https://farm9.staticflickr.com/8570/15251188384_3e6048b0c4_k_d.jpg'
+	  alt='see no evil'>
+	  <h1><code>:See no evil:</code> en <code>.gitignore</code></h1>
+	  <pre><code># OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+	  </code></pre>
+	</section>
+
+	<section data-background='img/no-tokens.png'>
+	</section>
+
+	<section><h1>Aún más transparente</h1>
+	  <pre><code>export AZ_CR_KEY=$(az acr credential show --name jjplatzi --query "passwords[0].value" --out tsv)
+az acr repository list --name jjplatzi --output table # Comprueba que existe
+az container create -g platzi --name hitosv1 --image jjplatzi.azurecr.io/hitos:v1
+    --registry-password $AZ_CR_KEY</code></pre>
+
+	  <aside class='notes'>De esta forma ni siquiera está en el
+	    sistema de ficheros, sólo en memoria.</aside>
+	</section>
+
+	<section
+	data-background='https://farm4.staticflickr.com/3644/3304096027_2f43dbed48_b_d.jpg'
+alt='cerrando los cerrojos'>
+	  <aside class='notes'>Todo esto es tan seguro como la cuenta
+	    que tengas y cómo lo almacenes y transmitas. Por ejemplo,
+	    no compartas API keys: usa permisos de acceso.</aside>
+	</section>
+
+	<section
+	  data-background='https://farm3.staticflickr.com/2285/2465233580_6e16395b96_b_d.jpg'
+alt='dinero que crece en los árboles'>
+	  <h2>Si no quieres que el dinero crezca en los árboles (para
+	    otros)</h2>
+	  <h1 class='fragment'>Guarda bien tus claves de API</h1>
+	</section>
 	
-	<section>
+	<section data-background='https://farm2.staticflickr.com/1600/23917790050_8908e58666_o_d.jpg'>
+	  <h1>Muchas gracias</h1>
 	  <h3>Créditos</h3>
 	  <ul class='credits'>
 	    <li><a
@@ -125,25 +178,31 @@ stdout_logfile=/var/log/supervisor/gobot.log</code></pre>
 	      <li><a
 	  href='https://www.flickr.com/photos/wendyga/19438901424/in/dateposted/'>Tuits
 		por Wendy</a></li>
+	      <li><a href='https://flic.kr/p/peGjXS'>See No Evil por
+		Japanexperterna.se</a></li>
+	      <li><a href='https://flic.kr/p/62YmCT'>Candados por Jon
+		Worth</a></li>
+	      <li><a href='https://flic.kr/p/4KQY4f'>Money in Trees
+		por ohkylel @twitter</a></li>
 	  </ul>
       </div>
-		</div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-		 Reveal.initialize({
-		  history: true,
-		  width: '90%',
-		 dependencies: [
-		   { src: 'plugin/notes/notes.js', async: true },
-		   { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-		 ]
-			});
-		</script>
-	</body>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    
+    <script>
+     // More info about config & dependencies:
+     // - https://github.com/hakimel/reveal.js#configuration
+     // - https://github.com/hakimel/reveal.js#dependencies
+     Reveal.initialize({
+       history: true,
+       width: '90%',
+       dependencies: [
+	 { src: 'plugin/notes/notes.js', async: true },
+	 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+       ]
+     });
+    </script>
+  </body>
 </html>
